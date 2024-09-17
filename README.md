@@ -1,10 +1,4 @@
 
-<link rel="stylesheet" type="text/css" href="styles.css">
-
-
-<link rel="stylesheet" type="text/css" href="styles.css">
-
-
 
 Website for playing flash games, roms and other various online games. Enjoy, and please credit if you use embed anyting. 
 
