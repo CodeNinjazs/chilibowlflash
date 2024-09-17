@@ -10,11 +10,7 @@
            
         }
     </style>
-</head>
-<body>
-    <h1>Welcome to My GitHub Page</h1>
-    <p>This is a sample text that will appear in white.</p>
-</body>
+
 </html>
 
 
@@ -45,5 +41,5 @@ body {
     background: #474643; /* Fallback color */
     background: url('https://i.ibb.co/CBZgGXh/Screenshot-2024-09-16-194940.png') no-repeat center center fixed;
     background-size: cover;
-    color: #474643; /* Optional: Change text color to white for better contrast */
+    color: white; /* Optional: Change text color to white for better contrast */
 }
