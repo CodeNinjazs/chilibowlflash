@@ -12,6 +12,14 @@ body {
 }
 
 
+
 a {
     color: red;
 }
+
+button, a.button {
+    color: red;
+    background-color: transparent; /* Optional: if you want to keep the background color of the button */
+    border: none; /* Optional: if you want to remove the border */
+}
+
