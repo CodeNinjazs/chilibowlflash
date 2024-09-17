@@ -9,3 +9,10 @@ a {
 body {
     background-color: merlin ;
 }
+
+body {
+    background: #000000; /* Fallback color */
+    background: url('https://example.com/your-galaxy-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #474643; /* Optional: Change text color to white for better contrast */
+}
