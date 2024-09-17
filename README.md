@@ -8,5 +8,5 @@ Website for playing flash games, roms and other various online games. Enjoy, and
 
 Credit to 3hk0 for getting some of these games, and to their creators. 
 
-<div style="color: red;">
+<div style="color: white;">
 </div>
