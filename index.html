@@ -6,7 +6,69 @@
     <title>My GitHub Page</title>
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Counter</title>
+</head>
+<body>
+    <div id="counter"></div>
+
     <script type="text/javascript">
+        // Function to set a cookie
+        function setCookie(syed, true, 365) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Check if the user is you
+        if (!getCookie('isYou')) {
+            // If not, increment the counter
+            var script = document.createElement('script');
+            script.src = 'https://www.freevisitorcounters.com/auth.php?id=6d31f1b3f20f532bd2821495521ac2ff1a9a31bc';
+            document.head.appendChild(script);
+
+            script.onload = function() {
+                var counterScript = document.createElement('script');
+                counterScript.src = 'https://www.freevisitorcounters.com/en/home/counter/1238771/t/0';
+                document.head.appendChild(counterScript);
+            };
+        } else {
+            document.getElementById('counter').innerText = 'You are not counted!';
+        }
+
+        // Set the cookie for yourself (run this once to set the cookie)
+        // setCookie('isYou', 'true', 365);
+    </script>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	<script type="text/javascript">
         // Check if the URL contains a specific query parameter
         if (window.location.search.includes('syed=ahmed')) {
             document.write('<a href="https://acadooghostwriter.com/">Acadoo Ghostwriter</a>');
