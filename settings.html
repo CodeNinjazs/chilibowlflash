@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GhostGate | Settings</title>
+    <meta charset="UTF-8">
+      <link id="dynamic-favicon" rel="icon" href="G-removebg-preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            background-color: #4B0082; /* Dark Purple */
+            overflow: hidden;
+            text-align: center;
+            padding: 15px 20px;
+            position: fixed;
+            width: calc(100% - 20px);
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            font-family: 'Comic Sans MS', sans-serif;
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #DA70D6;
+            text-shadow: 0 0 10px #9400D3;
+        }
+
+        /* Settings Button Styles */
+        .settings-button {
+            background-color: rgba(48, 25, 52, 0.8); /* Dark purple, 80% transparent */
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            margin: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .settings-button:hover {
+            background-color: rgba(48, 25, 52, 1); /* Fully opaque on hover */
+        }
+
+        p, h1, h2, h3, h4, h5 {
+            font-family: 'Comic Sans MS', sans-serif;
+            color: White;
+        }
+
+        h5 {
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        body {
+            cursor: crosshair;
+            background-color: #6A0DAD;
+            margin: 0;
+            padding-bottom: 50px;
+        }
+
+        html, body {
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #4B0082;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #9400D3;
+            border-radius: 10px;
+            border: 3px solid #4B0082;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #DA70D6;
+        }
+
+        .dot {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            animation: moveDots 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes moveDots {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        .dot:nth-child(odd) {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .dot:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .game-container {
+            margin: 0 auto;
+            text-align: center;
+            padding-bottom: 100px;
+            padding-top: 80px;
+        }
+      
+      select.settings-dropdown {
+            background-color: rgba(48, 25, 52, 0.8); /* Dark purple, 80% transparent */
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: crosshair;
+            transition: background-color 0.3s ease;
+            appearance: none;
+            width: 240px; /* To match the button size */
+            text-align: center;
+        }
+
+        select.settings-dropdown:hover {
+            background-color: rgba(48, 25, 52, 1); /* Fully opaque on hover */
+        }
+
+    </style>
+
+    <script>
+        // Function to generate dots for background animation
+        window.onload = function() {
+            const body = document.body;
+            for (let i = 0; i < 100; i++) {
+                let dot = document.createElement("div");
+                dot.className = "dot";
+                dot.style.width = dot.style.height = Math.random() * 5 + 3 + "px";
+                dot.style.top = Math.random() * window.innerHeight + "px";
+                dot.style.left = Math.random() * window.innerWidth + "px";
+                dot.style.animationDuration = Math.random() * 10 + 10 + "s";
+                body.appendChild(dot);
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="/mediamisc/credits.html">Credits</a>
+        <a href="music-Central.html">Music Central</a>
+    </div>
+
+    <!-- Content Section -->
+    <div class="game-container">
+        <p>Welcome to Settings</p>
+
+        <div style="margin:0 auto;text-align:center">
+                          <p>---------------------------------------</p>
+          
+                          <p>About:Blank
+                          Enable POP-UPS
+                          </p>
+
+          
+            <button class="settings-button" onclick="location.href='Cloak.html'">About:Blank Cloak</button>
+                          <p>---------------------------------------</p>
+                    
+                          <p>Tab Cloak</p>
+          
+              <select id="tab-options" class="settings-dropdown">
+        <option value="0">Select a Tab Cloak</option>
+        <option value="1">Google</option>
+        <option value="2">Gmail</option>
+        <option value="3">Google Slides</option>
+        <option value="4">Google Classroom</option>
+        <option value="5">Code.org</option>
+        <option value="6">Bing</option>
+        <option value="7">Firefox</option>
+        <option value="8">Google Drive</option>
+        <option value="9">Amazon</option>
+    </select>
+
+    <br>
+    <button class="settings-button" onclick="cloakTab()">Apply Cloak</button>
+    <button class="settings-button" onclick="resetTab()">Reset Tab</button>  
+    <script>
+        const tabOptions = [
+            {
+                title: "GhostGate | Settings",
+                favicon: "https://cdn.glitch.global/02fca343-4c8f-4742-ae54-4b9120f8ac29/G-removebg-preview.png?v=1726346726720"
+            },
+            {
+                title: "Google",
+                favicon: "https://www.google.com/favicon.ico"
+            },
+            {
+                title: "Gmail",
+                favicon: "https://cdn.iconscout.com/icon/free/png-256/free-gmail-logo-icon-download-in-svg-png-gif-file-formats--mail-email-logos-icons-2416660.png?f=webp"
+            },
+            {
+                title: "Google Slides",
+                favicon: "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico"
+            },
+            {
+                title: "Google Classroom",
+                favicon: "data:image/webp;base64,UklGRuoEAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSEIBAAARuS5E9D80UmTbdm3lk4PlO5CZDtAHLJr+0IHs0Mmh6QQOicwy58wCP099vWr7XYugbr1gyaEqYgImYCV77fTIXVuts9ETm6z3QE+PkRdJsClSSSp4jQ3AZVIuKh7klnuug8POWoXsPdd8vYozVqG7xW5HHLPLDkgfBNa6A4bWPczQNuqFhxa4tCxXMLSAaAX1ELEPoa0V1PVKDlosqBusBSWH3kzLYLXMtEJFyzDTgljLBHW1kJlWM1ptEjMT2jP0WywsY6nGQb20iqDdtFhItIxLLdFqKK3C0TKINebjPiNiAWsZ/UTuu1YTa0GLNdOkVdxwxSFSW8Apx233ikDivGD8Mr+jm86BS476/9C3wZgFU+FbpUYBXZ61+xPuYSiXE5yNmM0ymzb7/uuy3wXXXcQr17byi99tdxxCUiO38W4BVlA4IIIDAACwEwCdASpAAEAAPjEOjEYiEREKACADBLYAXBb2PzPoswVdE/HT9gP6rygPeD9ZudZKVxw+3L4C/5X2c7drzAfwr+Z/rT7zv8z/QDWJfQA/QD0pvZO/dD0hlszOwh0ragf6q/7lBESjNEY8LESvXgfL/1x3JEmhb1zrVckBQDxlgpzDDrcUE+GU8gdBFRhE/0RjFQdvQscsSSj7BRdVpyDn9V8L1VJAAP7+e2MH1vYRTnMqIM6MAowPiTLrf7e9nyszh6WtM/kit2JmbqbUbY+0pzHCAr8KGUEzKWVcjGrBoVKzOPCNTUgr7K4b9TzbZ5ljCNy0M9iqwo9e/G1Js+INmpow1WgYJgeZgju6Kxk+fW7v77+395xYKeHtKJ/1HtIg+UwpOA3UUdM5B1YHcfRDYRjYEavLpv7R9i/zPipF2uespinc3/8qVf+vD2jY3eZgSP3T2xGd1dXv/EmkxAn3eLVe/Qb3CXEB47d1h/1jjh/4TmCGgem9CP1O1zv3a24vm13jIO36/CTooZlDw8Ls9PYkV9ImeplypzPy5ooDFqFsKyWnCZDFRe+0ced5P1xNeXT8m4NW0KoxRO0NfhY9U37oimaOb1m7T6vBUWjN+MXr52wXOb+ibohxbY2kRM63XW29JnVEb3GS/PZeBFIU1o3wKzaexLc0JxRs5gTuU3L2D1QabmN3vb2v/Y492t3vsy6B+jF+6AnlhudEstpZ/o4lMkuh+7XiMy3/9cfaeeeMJZHLvcK3pWnNwwFbGe74JA7tZKAqTWK0gwmWg7BorluuxGRmCdgd/gBg2uUpYS3zhDoQU3rvb+6BuAO4H6FYQWbTTc/Y90zgmcIjaIfbUZY3A4TMeTBI/20N/j0GnsJRL9CP2S8TNmevT1qnEYFz/f9Z0qYhBKVCLNL3n/6MK9tEOTkPog5TDm5Zb6SjTb3MjD3H4L2hcYzsQ/h9+hVns2EgThYVPCdkZ/WeS4XFPxnz/xjHTCOo2TUJQKJMd021XB5QDngITsogiAqTQlK1zd7/ux/8PPaRj56X/1I6+sADK6jFD4SgTlC1dmelFCm9OSeenk56APsVdQfXon8/WwyGkZEm1cPVh0L82Pat7+0NEC99bbzPl2u/Rbmdk17TXFTRM8z7ge8HrnJyjTpbsuuve/eUkzSYHOxMESzSOgbmRe5d0OFYPbI+8KtQmQAA"
+            },
+            {
+                title: "Code.org",
+                favicon: "https://code.org/images/favicon.ico"
+            },
+            {
+                title: "Bing",
+                favicon: "https://www.bing.com/sa/simg/favicon-2x.ico"
+            },
+            {
+                title: "Firefox",
+                favicon: "https://www.mozilla.org/media/img/favicons/firefox/favicon-196x196.png"
+            },
+            {
+                title: "Google Drive",
+                favicon: "https://drive.google.com/favicon.ico"
+            },
+            {
+                title: "Amazon",
+                favicon: "https://www.amazon.com/favicon.ico"
+            }
+        ];
+
+        function cloakTab() {
+            const selectedIndex = document.getElementById('tab-options').value;
+            const selectedTab = tabOptions[selectedIndex];
+            if (selectedIndex !== "0") { // Make sure a valid option is selected
+                document.title = selectedTab.title;
+                document.getElementById('dynamic-favicon').setAttribute('href', selectedTab.favicon);
+            }
+        }
+
+        function resetTab() {
+            document.title = tabOptions[0].title;
+            document.getElementById('dynamic-favicon').setAttribute('href', tabOptions[0].favicon);
+        }
+    </script>
+          
+        </div>
+
+        <p>More Coming Soon...</p>
+    </div>
+
+</body>
+</html>
