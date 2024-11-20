@@ -1,0 +1,259 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--background-color);
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  align-items: center;
+  margin: 8% auto;
+  width: fit-content;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+h1 {
+  font-size: 90px;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--tab-border), var(--accent-color), var(--tab-background));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-top: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.search-container {
+  border: 2px solid var(--accent-color);
+  border-radius: 50px;
+  padding: 0px 10px;
+  box-shadow: 0 0 15px 3px var(--accent-color);
+  margin-top: -3vw;
+  background-color: var(--tab-background);
+  display: flex;
+  height: 50px;
+  align-items: center;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.search-container input {
+  border: none;
+  margin-right: 5px;
+  outline: none;
+  width: 31vw;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--tab-background);
+}
+
+.search-icon {
+  margin: 15px 10px;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+.shortcuts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  justify-content: start;
+  width: 36vw;
+  align-items: center;
+  margin-top: 30px;
+  animation: scaleIn 0.8s ease forwards;
+}
+
+.shortcut {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.3s;
+  max-width: 100px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 10px;
+  height: 90px;
+}
+
+.shortcut:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.shortcut img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.shortcut p {
+  margin-top: 10px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.add img {
+  background-color: var(--accent-color);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: var(--background-color);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--tab-border);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  color: var(--text-color);
+}
+
+.modal h2 {
+  color: var(--text-color);
+}
+
+.close {
+  color: var(--text-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--accent-color);
+}
+
+#shortcut-form,
+#edit-shortcut-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#shortcut-form label,
+#edit-shortcut-form label {
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+#shortcut-form input,
+#edit-shortcut-form input {
+  border: 1px solid var(--tab-border);
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+#add-shortcut,
+#edit-shortcut {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#add-shortcut:hover {
+  background-color: var(--tab-border);
+}
+
+#shortcut-context-menu {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  background-color: var(--tab-background);
+  border: 1px solid var(--tab-border);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  padding: 8px;
+  width: fit-content;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.shortcut-context-menu ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+.context-menu ul {
+  list-style-type: none;
+  list-style: none;
+}
+
+.context-menu li {
+  border: 3px;
+  padding: 5px;
+  list-style-type: none;
+  list-style: none;
+  cursor: pointer;
+}
+
+.context-menu li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sponsor {
+  display: block;
+  border-radius: 5px;
+  opacity: 0.8;
+  margin: 0 auto;
+  max-width: 100%;
+  box-shadow: 0 0 10px 5px red;
+  position: fixed;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
